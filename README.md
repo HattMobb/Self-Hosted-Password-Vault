@@ -37,7 +37,24 @@ For a run down of features, functions and capabilities of Passbolt, head to: htt
 ![Screenshot 2023-05-21 121656](https://github.com/HattMobb/Self-Hosted-Password-Vault/assets/134090089/9eaa93ae-b985-426c-9cc7-02e9cc91fea6)
 
 - Finally, change the host port from 80 to 8080 (Docker port)
-- 
+
 ![Screenshot 2023-05-21 122447](https://github.com/HattMobb/Self-Hosted-Password-Vault/assets/134090089/26b55b65-2f88-4a6d-a020-fdc1827d18c2)
+
+- Create your container via `docker-compose -f docker-compose-ce.yaml up -d`
+
+- Create your admin account via `docker-compose -f docker-compose-ce.yaml exec passbolt su -m -c "/usr/share/php/passbolt/bin/cake passbolt register_user -u EMAIL -f FIRSTNAME -l LASTNAME -r admin" -s /bin/sh www-data` 
+
+- You'll see the screen below, under which is a link you copy into your browser 
+
+![Screenshot 2023-05-21 154408](https://github.com/HattMobb/Self-Hosted-Password-Vault/assets/134090089/fbae4e68-9960-48bc-a844-f2a7897f3547)
+
+- Create your master password (obviously don't lose this  and  you're good to go! Don't forget to download the Passbolt extension for your browser of choice). 
+
+- You cana now create passwords for any account of your choice
+
+ ![Screenshot 2023-05-21 154735](https://github.com/HattMobb/Self-Hosted-Password-Vault/assets/134090089/513d6fbd-f367-44ac-be5e-b507308de58c)
+
+
+
 
 
