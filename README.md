@@ -30,7 +30,14 @@ For a run down of features, functions and capabilities of Passbolt, head to: htt
 ![Screenshot 2023-05-21 115601](https://github.com/HattMobb/Self-Hosted-Password-Vault/assets/134090089/2f0a4ba4-f731-427c-922a-6f52b7d1b3b9)
 
 - The APP_FULL_BASE_URL environment variable is set by default to https://passbolt.local but I'm changing it to https://localhost due to it being self hosted.
+- PASSBOLT_SSL_FORCE can be set to 'false' as it is being hosted within it's own container apassvault includes it's own self signed cert.
 - On top of the APP_FULL_BASE_URL, passbolt requires you to set email settings to receive notifications and for recovery purposes. They can be completed as follows:
 
 
 ![Screenshot 2023-05-21 121656](https://github.com/HattMobb/Self-Hosted-Password-Vault/assets/134090089/9eaa93ae-b985-426c-9cc7-02e9cc91fea6)
+
+- Finally, change the host port from 80 to 8080 (Docker port)
+- 
+![Screenshot 2023-05-21 122447](https://github.com/HattMobb/Self-Hosted-Password-Vault/assets/134090089/26b55b65-2f88-4a6d-a020-fdc1827d18c2)
+
+
